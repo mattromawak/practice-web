@@ -1,0 +1,14 @@
+<!-- src/app/components/item-list/item-list.component.html -->
+
+<button routerLink="/create-item">Add New Item</button>
+
+<table>
+    <tr *ngFor="let item of items">
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+            <button (click)="editItem(item.id)">Edit</button>
+            <button (click)="deleteItem(item.id)">Delete</button>
+        </td>
+    </tr>
+</table>
